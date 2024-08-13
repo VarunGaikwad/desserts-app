@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  @apply text-base font-normal;
+}
+
+.main {
+  @apply p-4 grid grid-cols-1 md:grid-cols-3 md:grid-flow-col gap-2;
+}
+
+.header-title {
+  @apply text-5xl font-bold;
+}
+
+.item-btn {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform: translateX(50%) translateY(50%);
+}
+
+.btn {
+  @apply flex px-6 py-3 gap-2 w-52 items-center border-rose-500 border rounded-3xl font-semibold;
+}
+
+.icon-btn {
+  @apply grid place-content-center size-6 bg-transparent hover:bg-white border border-white rounded-full;
+}
+
+.icon-btn > svg {
+  fill: white;
+}
+
+.icon-btn:hover > svg {
+  @apply fill-rose-500;
+}
+
+.confirm-order-view {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @apply bg-white p-6 rounded-3xl flex flex-col gap-2 w-96;
+
+  max-height: 100vh;
+  overflow-y: auto;
+}
