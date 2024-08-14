@@ -1,35 +1,32 @@
-# Frontend Mentor - Product list with cart solution
+# Frontend Mentor - Dessert App Solution
 
-This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). This challenge helped improve my skills in building user interfaces using React and Tailwind CSS.
 
-## Table of contents
+## Table of Contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
+- [My Process](#my-process)
+  - [Built With](#built-with)
+  - [Continued Development](#continued-development)
+  - [Useful Resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
-### The challenge
+### The Challenge
 
 Users should be able to:
 
-- Add items to the cart and remove them
-- Increase/decrease the number of items in the cart
-- See an order confirmation modal when they click "Confirm Order"
-- Reset their selections when they click "Start New Order"
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- Add items to the cart and remove them.
+- Increase/decrease the number of items in the cart.
+- See an order confirmation modal when they click "Confirm Order".
+- Reset their selections when they click "Start New Order".
+- View the optimal layout for the interface depending on their device's screen size.
+- See hover and focus states for all interactive elements on the page.
 
 ### Screenshot
 
@@ -39,9 +36,9 @@ Users should be able to:
 
 - Live Site URL: [DEMO](https://varungaikwad.github.io/desserts-app/)
 
-## My process
+## My Process
 
-### Built with
+### Built With
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -49,43 +46,27 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Tailwind CSS](https://tailwindcss.com/) - For styling
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+### Continued Development
 
-### What I learned
+In the future, I plan to enhance this project by:
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Implementing local storage to save the cart state between sessions.
+- Adding unit tests for the key components.
+- Exploring further responsive design techniques.
 
-To see how you can add code snippets, see below:
+### Useful Resources
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - This was helpful in understanding the utility-first approach.
+- [React Docs](https://reactjs.org/docs/getting-started.html) - A great resource for understanding React fundamentals.
 
 ## Author
 
 - Website - [Varun Gaikwad](https://varungaikwad.github.io/portfolio/)
 - Frontend Mentor - [@VarunGaikwad](https://www.frontendmentor.io/profile/VarunGaikwad)
-- LinkedIn - [@VarunGaikwad](https://www.linkedin.com/in/varun-gaikwad/)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- LinkedIn - [Varun Gaikwad](https://www.linkedin.com/in/varun-gaikwad/)
 
 ## Acknowledgments
+
+I would like to thank the Frontend Mentor community for the feedback and support. Special thanks to those who provided code reviews and insights.
