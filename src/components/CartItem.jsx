@@ -9,7 +9,7 @@ CartItem.propTypes = {
 };
 
 export default function CartItem({ name, quantity, price }) {
-  const { setModel } = useContext(GlobalModel);
+  const { onRemoveCompletely } = useContext(GlobalModel);
 
   return (
     <div className="flex justify-between items-center">
@@ -25,10 +25,7 @@ export default function CartItem({ name, quantity, price }) {
       </div>
       <RemoveIcon
         onClick={() => {
-          setModel((model) => {
-            const newItems = model.items.filter((item) => item.name !== name);
-            return { ...model, items: newItems };
-          });
+          onRemoveCompletely({ name, price });
         }}
       />
     </div>

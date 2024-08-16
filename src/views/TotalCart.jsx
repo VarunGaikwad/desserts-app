@@ -4,8 +4,7 @@ import GlobalModel from "../context/context";
 import ConfirmOrderView from "./ConfirmOrderView";
 
 export default function TotalCart() {
-  const { model } = useContext(GlobalModel),
-    items = model.items.filter((item) => item.quantity > 0),
+  const { items } = useContext(GlobalModel),
     [showConfirmOrderView, setShowConfirmOrderView] = useState(false);
 
   return (

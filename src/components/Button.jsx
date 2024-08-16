@@ -1,63 +1,49 @@
 import PropTypes from "prop-types";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import GlobalModel from "../context/context";
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  isPressed: PropTypes.bool.isRequired,
+  firstClick: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
   setIsPressed: PropTypes.func.isRequired,
 };
 
-export default function Button({ name, price, setIsPressed }) {
-  const [isActive, setIsActive] = useState(false),
-    [count, setCount] = useState(0),
-    {
-      model: { items },
-      setModel,
-    } = useContext(GlobalModel);
+export default function Button({
+  name,
+  isPressed,
+  firstClick,
+  increment,
+  decrement,
+  setIsPressed,
+}) {
+  const { items } = useContext(GlobalModel),
+    count = items.find((item) => item.name === name)?.quantity || 0;
 
-  useEffect(() => {
-    if (count === 0) {
-      setIsActive(false);
-    }
-    const index = items.findIndex((item) => item.name === name);
-
-    if (count === 0 && index >= 0) {
-      items.splice(index, 1);
-    } else if (index === -1) {
-      items.push({ name, price, quantity: count });
-    } else {
-      items[index] = { name, price, quantity: count };
-    }
-    setModel((prev) => ({ ...prev, items }));
-  }, [count, setModel, items, name, price]);
-
-  useEffect(() => {
-    if (isActive) setCount(1);
-    setIsPressed(isActive);
-  }, [isActive, setIsPressed]);
-
+  if (count === 0) setIsPressed(false);
   return (
     <button
-      onClick={() => setIsActive(true)}
+      onClick={firstClick}
       className={
         "btn item-btn " +
-        (isActive
+        (isPressed
           ? "bg-rose-500 justify-between text-white"
           : "bg-white justify-center")
       }
     >
-      {!isActive ? (
+      {!isPressed ? (
         <>
           <img src="./assets/images/icon-add-to-cart.svg" /> Add to Cart
         </>
       ) : (
         <>
-          <IconButton onClick={() => setCount(count - 1)}>
+          <IconButton onClick={decrement}>
             <Decrement />
           </IconButton>
           {count}
-          <IconButton onClick={() => setCount(count + 1)}>
+          <IconButton onClick={increment}>
             <Increment />
           </IconButton>
         </>

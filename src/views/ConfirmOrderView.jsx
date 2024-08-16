@@ -3,8 +3,7 @@ import GlobalModel from "../context/context";
 import CartItemWithImage from "../components/CartItemWithImage";
 
 export default function ConfirmOrderView() {
-  const { model } = useContext(GlobalModel),
-    items = model.items.filter((item) => item.quantity > 0);
+  const { items } = useContext(GlobalModel);
 
   return (
     <div className="confirm-order-view">

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "./Button";
 import PropTypes from "prop-types";
+import GlobalModel from "../context/context";
 
 Item.propTypes = {
   image: PropTypes.object.isRequired,
@@ -10,7 +11,8 @@ Item.propTypes = {
 };
 
 export default function Item({ image, name, category, price }) {
-  const [isPressed, setIsPressed] = useState(false);
+  const [isPressed, setIsPressed] = useState(false),
+    { onFirstClick, onIncrement, onDecrement } = useContext(GlobalModel);
 
   return (
     <div className="mt-4 flex flex-col">
@@ -28,7 +30,21 @@ export default function Item({ image, name, category, price }) {
             alt={name}
           />
         </picture>
-        <Button {...{ name, price, setIsPressed }} />
+        <Button
+          firstClick={() => {
+            if (!isPressed) {
+              onFirstClick({ name, price, quantity: 1 });
+              setIsPressed(true);
+            }
+          }}
+          increment={() => {
+            onIncrement({ name, price });
+          }}
+          decrement={() => {
+            onDecrement({ name, price });
+          }}
+          {...{ name, price, isPressed, setIsPressed }}
+        />
       </div>
       <span className="mt-8 font-extralight">{category}</span>
       <span className="font-semibold">{name}</span>
