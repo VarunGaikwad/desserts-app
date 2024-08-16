@@ -12,7 +12,7 @@ export default function CartItem({ name, quantity, price }) {
   const { onRemoveCompletely } = useContext(GlobalModel);
 
   return (
-    <div className="flex justify-between items-center">
+    <div role="listitem" className="flex justify-between items-center">
       <div className="flex-1 space-y-1">
         <span className="font-semibold">{name}</span>
         <div className="flex gap-4">

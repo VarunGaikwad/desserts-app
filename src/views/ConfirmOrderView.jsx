@@ -7,7 +7,12 @@ export default function ConfirmOrderView() {
 
   return (
     <div className="confirm-order-view">
-      <img width={50} src="./assets/images/icon-order-confirmed.svg" />
+      <img
+        width={50}
+        alt="Order Confirmed"
+        role="img"
+        src="./assets/images/icon-order-confirmed.svg"
+      />
       <span className="text-3xl font-bold">Order Confirmed</span>
       <span className="mb-5">We hope you enjoy your food!</span>
       {items.map(({ quantity, name, price }) => (

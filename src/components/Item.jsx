@@ -15,13 +15,14 @@ export default function Item({ image, name, category, price }) {
     { onFirstClick, onIncrement, onDecrement } = useContext(GlobalModel);
 
   return (
-    <div className="mt-4 flex flex-col">
+    <div role="listitem" className="mt-4 flex flex-col">
       <div className="relative">
         <picture>
           <source srcSet={image.desktop} media="(min-width: 1024px)" />
           <source srcSet={image.tablet} media="(min-width: 768px)" />
           <source srcSet={image.mobile} media="(min-width: 480px)" />
           <img
+            role="img"
             className={
               "rounded-2xl w-full " +
               (isPressed ? "outline outline-rose-500" : "")

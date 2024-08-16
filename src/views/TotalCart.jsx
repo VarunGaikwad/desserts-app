@@ -8,8 +8,8 @@ export default function TotalCart() {
     [showConfirmOrderView, setShowConfirmOrderView] = useState(false);
 
   return (
-    <div className="mt-8 p-4 flex flex-col gap-4">
-      <span className="text-2xl font-bold text-rose-500">
+    <div role="main" className="mt-8 p-4 flex flex-col gap-4">
+      <span role="heading" className="text-2xl font-bold text-rose-500">
         Your Cart (
         {items.length ? items.reduce((acc, curr) => acc + curr.quantity, 0) : 0}
         )
@@ -29,7 +29,11 @@ export default function TotalCart() {
             </span>
           </div>
           <div className="mt-6 flex items-center mx-auto gap-2">
-            <img src="./assets/images/icon-carbon-neutral.svg" />
+            <img
+              alt="Carbon Neutral"
+              role="img"
+              src="./assets/images/icon-carbon-neutral.svg"
+            />
             <span>
               This is a <span className="font-bold"> carbon-neutral </span>{" "}
               delivery
@@ -46,6 +50,8 @@ export default function TotalCart() {
       ) : (
         <>
           <img
+            alt="Empty Cart"
+            role="img"
             className="w-2/3 mx-auto"
             src="./assets/images/illustration-empty-cart.svg"
           />

@@ -35,7 +35,12 @@ export default function Button({
     >
       {!isPressed ? (
         <>
-          <img src="./assets/images/icon-add-to-cart.svg" /> Add to Cart
+          <img
+            role="img"
+            alt="Add to cart"
+            src="./assets/images/icon-add-to-cart.svg"
+          />{" "}
+          Add to Cart
         </>
       ) : (
         <>

@@ -12,7 +12,13 @@ export default function CartItemWithImage({ quantity, name, price }) {
 
   return (
     <div className="flex gap-4 items-center">
-      <img width={70} className="rounded-2xl" src={thumbnail} />
+      <img
+        alt={name}
+        role="img"
+        width={70}
+        className="rounded-2xl"
+        src={thumbnail}
+      />
       <div className="flex-1 space-y-1">
         <span className="font-semibold">{name}</span>
         <div className="flex gap-4">
