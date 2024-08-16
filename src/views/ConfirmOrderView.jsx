@@ -9,7 +9,7 @@ export default function ConfirmOrderView() {
     <div className="confirm-order-view">
       <img
         width={50}
-        alt="Order Confirmed"
+        alt=""
         role="img"
         src="./assets/images/icon-order-confirmed.svg"
       />

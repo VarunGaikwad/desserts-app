@@ -9,7 +9,11 @@ export default function TotalCart() {
 
   return (
     <div role="main" className="mt-8 p-4 flex flex-col gap-4">
-      <span role="heading" className="text-2xl font-bold text-rose-500">
+      <span
+        role="heading"
+        aria-level={2}
+        className="text-2xl font-bold text-rose-500"
+      >
         Your Cart (
         {items.length ? items.reduce((acc, curr) => acc + curr.quantity, 0) : 0}
         )
@@ -30,7 +34,7 @@ export default function TotalCart() {
           </div>
           <div className="mt-6 flex items-center mx-auto gap-2">
             <img
-              alt="Carbon Neutral"
+              alt=""
               role="img"
               src="./assets/images/icon-carbon-neutral.svg"
             />
@@ -50,7 +54,7 @@ export default function TotalCart() {
       ) : (
         <>
           <img
-            alt="Empty Cart"
+            alt=""
             role="img"
             className="w-2/3 mx-auto"
             src="./assets/images/illustration-empty-cart.svg"
